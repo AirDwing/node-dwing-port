@@ -14,5 +14,5 @@ module.exports = p => new Promise((resolve) => {
     })
     // return true if success
     .once('listening', () => tester.once('close', () => resolve(true)).close())
-    .listen(port);
+    .listen(port, '127.0.0.1');
 });
